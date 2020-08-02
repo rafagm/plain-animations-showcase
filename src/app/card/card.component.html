@@ -1,5 +1,5 @@
 <mat-card #card (mouseover)="onHoverCard()" (mouseout)="offHoverCard()">
-  <mat-card-header>
+  <mat-card-header class="d-flex justify-content-center">
     <mat-card-title>{{ title }}</mat-card-title>
   </mat-card-header>
   <img
@@ -7,5 +7,8 @@
     class="card--screenshot"
     [src]="imgUrl"
     [alt]="imgAlt">
+    <mat-card-actions class="d-flex justify-content-center m-1">
+      <button mat-button>See it in action</button>
+    </mat-card-actions>
 
 </mat-card>
