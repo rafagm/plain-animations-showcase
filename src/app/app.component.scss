@@ -1,3 +1,5 @@
+
+
 .card {
   .screenshot {
   }
@@ -41,6 +43,40 @@
       letter-spacing: 0.1em;
     }
   }
+}
+
+a {
+  background-color: transparent;
+  .arrow {
+    cursor: pointer;
+    width: 5em;
+    position: absolute;
+    bottom: 1em;
+    left: calc(50% - 2.5em);
+    opacity: 0.8;
+    transition: all 0.5s;
+    mix-blend-mode: overlay;
+    -webkit-animation: arrow2 4s ease-in-out infinite alternate-reverse,
+      fade-in 3s ease-out 1s backwards;
+    animation: arrow2 4s ease-in-out infinite alternate-reverse,
+      fade-in 3s ease-out 1s backwards;
+    path {
+      fill: none;
+      stroke: #fff;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+      stroke-width: .7;
+    }
+  }
+}
+
+a:-webkit-any-link {
+  color: -webkit-link;
+  cursor: pointer;
+  text-decoration: underline;
+}
+svg:not(:root) {
+  overflow: hidden;
 }
 
 .line-break {
@@ -88,5 +124,25 @@
 
   to {
     transform: none;
+  }
+}
+
+@-webkit-keyframes arrow2 {
+  0% {
+      transform: translateY(25%) scaleX(.8)
+  }
+
+  to {
+      transform: translateY(-25%) scale(1.2,.8)
+  }
+}
+
+@keyframes arrow2 {
+  0% {
+      transform: translateY(25%) scaleX(.8)
+  }
+
+  to {
+      transform: translateY(-25%) scale(1.2,.8)
   }
 }
