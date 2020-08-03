@@ -1,25 +1,36 @@
-
-
 mat-card {
-  opacity: .45;
-  background-color: #EDCF0C;
+  position: relative;
+  background-color: #edcf0c;
 
   mat-card-header {
-
-    mat-card-title{
+    mat-card-title {
       font-size: 24px;
-      color: #184FA1;
+      color: #184fa1;
       font-weight: 700;
       letter-spacing: 1px;
+      backface-visibility: hidden;
     }
   }
+}
 
-
+.card {
+  animation: grayscale .3s ease-in forwards;
 
 }
 
 button {
-  background-color: #184FA1;
+  background-color: #184fa1;
   font-size: 16px;
   color: whitesmoke;
+}
+
+@keyframes grayscale {
+  from {
+    -webkit-filter: grayscale(0);
+    filter: grayscale(0);
+  }
+  to {
+    -webkit-filter: grayscale(1);
+    filter: grayscale(1);
+  }
 }
