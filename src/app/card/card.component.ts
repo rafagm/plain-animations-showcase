@@ -35,7 +35,8 @@ export class CardComponent implements OnInit {
     this.tl = TweenLite.to(this.cardNativeElement,
       .3,
       {
-      scale: 1.05
+      scale: 1.05,
+      ease: Linear.easeNone
     }).reverse();
   }
 

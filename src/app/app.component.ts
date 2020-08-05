@@ -1,5 +1,5 @@
 import { Component, HostListener } from "@angular/core";
-import { gsap, TimelineMax, Linear, TweenLite } from "gsap";
+import { gsap, TimelineMax } from "gsap";
 import { TextPlugin } from "gsap/TextPlugin";
 
 gsap.registerPlugin(TextPlugin);
@@ -22,9 +22,8 @@ export class AppComponent {
     this.topContainer = document.getElementsByClassName("top-container")[0];
     //this.onScroll(); //funciona
     this.initEffects();
-
   }
-/*
+  /*
   @HostListener("window:scroll", ["$event"]) // en teoria cuando hago scroll deberia hacer lo mismo
   private onScroll($event?: Event) {
     console.log("Inside onScroll");
@@ -37,8 +36,6 @@ export class AppComponent {
     }
     //if (!this.scrolling) this.elementInViewport(this.topContainer);
   } */
-
-
 
   elementInViewport(element) {
     const bounding = element.getBoundingClientRect();
@@ -65,17 +62,20 @@ export class AppComponent {
   }
 
   private animateTopContainerDescription() {
-    console.log("animatiotopcontainer innn");
-    let tl =  new TimelineMax({});
-    let tl2 =  new TimelineMax({});
+    const tl = new TimelineMax({});
 
-
-    tl.from(".top-container h1", 1, {scale: 4, ease: "power2"})
-      .to("#top-container__description", 2, {text: "Examples of JavaScript animations", ease: "power1.in", repeat: 1, yoyo: true, repeatDelay: 1})
-
-    tl2.to("#top-container__description", 2, {text: "made by Rafael Guardeño", delimiter: " ", ease: "linear", delay: 6, padSpace: true});
-
+    tl.from(".top-container h1", 1, {
+      scale: 4,
+      ease: "power2",
+    }).to("#top-container__description", 2, {
+      text: "JavaScript animations examples",
+      ease: "power1.in",
+      repeat: 1,
+      yoyo: true,
+      repeatDelay: 2.2,
+    }).to("#top-container__description", 2, {
+      text: "made by Rafael Guardeño",
+      ease: "power1.out",
+    }).to("#top-container__description", 5, {color: "#F9FFB5", repeat: -1, yoyo: true});
   }
-
-
- }
+}
