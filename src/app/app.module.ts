@@ -7,12 +7,16 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MaterialModule } from './material.module';
 import { CardComponent } from './card/card.component';
 import { CursorComponent } from './cursor/cursor.component';
+import { AnimationScrollComponent } from './animation-scroll/animation-scroll.component';
+import { HomeComponent } from './home/home.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     CardComponent,
-    CursorComponent
+    CursorComponent,
+    AnimationScrollComponent,
+    HomeComponent
   ],
   imports: [
     BrowserModule,

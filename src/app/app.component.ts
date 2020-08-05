@@ -1,6 +1,8 @@
 import { Component, HostListener } from "@angular/core";
 import { gsap, TimelineMax } from "gsap";
 import { TextPlugin } from "gsap/TextPlugin";
+import { Router, RouterEvent, NavigationEnd } from "@angular/router";
+import { filter } from "rxjs/operators";
 
 gsap.registerPlugin(TextPlugin);
 
@@ -16,6 +18,29 @@ export class AppComponent {
   private topContainer: Element;
 
   private scrolling = false;
+
+  public showBackHomeButton = false;
+
+  constructor(private router: Router) {
+    this.initRouterEvents();
+  }
+
+  initRouterEvents() {
+    this.router.events
+      .pipe(filter((event) => event instanceof NavigationEnd))
+      .subscribe((event: NavigationEnd) => {
+        if (event.urlAfterRedirects !== "/") this.showBackButton();
+        else this.hideBackButton();
+      });
+  }
+
+  showBackButton() {
+    this.showBackHomeButton = true;
+  }
+
+  hideBackButton() {
+    this.showBackHomeButton = false;
+  }
 
   ngAfterViewInit(): void {
     this.mainDiv = document.getElementById("main");
@@ -67,15 +92,34 @@ export class AppComponent {
     tl.from(".top-container h1", 1, {
       scale: 4,
       ease: "power2",
-    }).to("#top-container__description", 2, {
-      text: "JavaScript animations examples",
-      ease: "power1.in",
-      repeat: 1,
-      yoyo: true,
-      repeatDelay: 2.2,
-    }).to("#top-container__description", 2, {
-      text: "made by Rafael Guardeño",
-      ease: "power1.out",
-    }).to("#top-container__description", 5, {color: "#F9FFB5", repeat: -1, yoyo: true});
+    })
+      .to("#top-container__description", 2, {
+        text: "JavaScript animations examples",
+        ease: "power1.in",
+        repeat: 1,
+        yoyo: true,
+        repeatDelay: 2.2,
+      })
+      .to("#top-container__description", 2, {
+        text: "made by Rafael Guardeño",
+        ease: "power1.out",
+      })
+      .to("#top-container__description", 5, {
+        color: "#F9FFB5",
+        repeat: -1,
+        yoyo: true,
+      });
+  }
+
+  onClickArrow(element) {
+    element.scrollIntoView({
+      behavior: "smooth",
+      block: "start",
+      inline: "nearest",
+    });
+  }
+
+  backHome() {
+    this.router.navigateByUrl('/');
   }
 }
