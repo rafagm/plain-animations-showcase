@@ -1,8 +1,6 @@
 <mat-card
-  [class.card]="!hovered"
-  #card
-  (mouseover)="onHoverCard()"
-  (mouseout)="offHoverCard()">
+  class="card"
+  #card>
   <mat-card-header class="d-flex justify-content-center">
     <mat-card-title>{{ title }}</mat-card-title>
   </mat-card-header>

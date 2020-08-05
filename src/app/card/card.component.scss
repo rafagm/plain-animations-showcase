@@ -14,8 +14,18 @@ mat-card {
 }
 
 .card {
-  animation: grayscale .3s ease-in forwards;
+  -webkit-filter: grayscale(1);
+  filter: grayscale(1);
+  transition: all 0.3s ease-in;
 
+  &:hover {
+    -webkit-filter: grayscale(0);
+    filter: grayscale(0);
+    transform: scale(1.07);
+    -webkit-box-shadow: 7px 13px 5px 0px rgba(0, 0, 0, 0.51);
+    -moz-box-shadow: 7px 13px 5px 0px rgba(0, 0, 0, 0.51);
+    box-shadow: 7px 13px 5px 0px rgba(0, 0, 0, 0.51);
+  }
 }
 
 button {
@@ -24,13 +34,14 @@ button {
   color: whitesmoke;
 }
 
-@keyframes grayscale {
+@keyframes cardAnimation {
   from {
-    -webkit-filter: grayscale(0);
-    filter: grayscale(0);
-  }
-  to {
     -webkit-filter: grayscale(1);
     filter: grayscale(1);
+  }
+  to {
+    -webkit-filter: grayscale(0);
+    filter: grayscale(0);
+    transform: scale(1.07);
   }
 }

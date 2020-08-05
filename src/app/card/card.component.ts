@@ -29,26 +29,4 @@ export class CardComponent implements OnInit {
   constructor() {}
 
   ngOnInit() {}
-
-  ngAfterViewInit(): void {
-    this.cardNativeElement = this.card.first.nativeElement;
-    this.tl = TweenLite.to(this.cardNativeElement,
-      .3,
-      {
-      scale: 1.05,
-      ease: Linear.easeNone
-    }).reverse();
-  }
-
-  onHoverCard() {
-    if (this.tl.reversed()) this.tl.play();
-
-    this.hovered = true;
-  }
-
-  offHoverCard() {
-    if (!this.tl.reversed()) this.tl.reverse();
-
-    this.hovered = false;
-  }
 }
