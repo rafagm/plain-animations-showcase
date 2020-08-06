@@ -1,9 +1,14 @@
 import { Component, HostListener } from "@angular/core";
 import { gsap, TimelineMax } from "gsap";
 import { TextPlugin } from "gsap/TextPlugin";
-import { Router, RouterEvent, NavigationEnd, RouterOutlet } from "@angular/router";
+import {
+  Router,
+  RouterEvent,
+  NavigationEnd,
+  RouterOutlet,
+} from "@angular/router";
 import { filter } from "rxjs/operators";
-import { slideInAnimation } from './route-animation';
+import { slideInAnimation } from "./route-animation";
 
 gsap.registerPlugin(TextPlugin);
 
@@ -11,7 +16,7 @@ gsap.registerPlugin(TextPlugin);
   selector: "app-root",
   templateUrl: "./app.component.html",
   styleUrls: ["./app.component.scss"],
-  animations: [slideInAnimation]
+  animations: [slideInAnimation],
 })
 export class AppComponent {
   title = "Animation Showcase";
@@ -122,10 +127,12 @@ export class AppComponent {
   }
 
   backHome() {
-    this.router.navigateByUrl('/');
+    this.router.navigateByUrl("");
   }
 
   prepareRoute(outlet: RouterOutlet) {
-    return outlet && outlet.activatedRouteData && outlet.activatedRouteData.animation;
+    return (
+      outlet && outlet.activatedRouteData && outlet.activatedRouteData.animation
+    );
   }
 }
