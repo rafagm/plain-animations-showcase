@@ -7,11 +7,13 @@ import { HomeComponent } from './home/home.component';
 const routes: Routes = [
   {
     path: '',
-    component: HomeComponent
+    component: HomeComponent,
+    data: {animation: 'HomePage'}
   },
   {
     path: 'scroll-animation',
-    component: AnimationScrollComponent
+    component: AnimationScrollComponent,
+    data: {animation: 'CasePage'}
   },
   {
     path: "**",

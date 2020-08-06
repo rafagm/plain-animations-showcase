@@ -1,0 +1,33 @@
+import {
+  transition,
+  trigger,
+  query,
+  style,
+  animate,
+  group,
+  animateChild
+} from '@angular/animations';
+
+export const slideInAnimation =
+  trigger('routeAnimations', [
+    transition('HomePage => CasePage', [
+      style({ position: 'relative' }),
+      query(':leave', [
+        style({
+          position: 'absolute',
+          top: 0,
+          left: 0,
+          width: '100%'
+        })
+      ]),
+      query(':enter', [
+        style({ left: '-100%' })
+      ]),
+      query(':leave', animateChild()),
+      group([
+        query(':leave', [
+          animate('400ms ease-in', style({ left: '100%' }))
+        ])
+      ])
+    ])
+  ]);
