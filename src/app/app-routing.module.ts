@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { AnimationScrollComponent } from './animation-scroll/animation-scroll.component';
 import { HomeComponent } from './home/home.component';
+import { ListAnimationComponent } from './list-animation/list-animation.component';
 
 
 const routes: Routes = [
@@ -13,6 +14,11 @@ const routes: Routes = [
   {
     path: 'scroll-animation',
     component: AnimationScrollComponent,
+    data: {animation: 'CasePage'}
+  },
+  {
+    path: 'list-animation',
+    component: ListAnimationComponent,
     data: {animation: 'CasePage'}
   },
   {

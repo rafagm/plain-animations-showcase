@@ -1,15 +1,14 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit } from "@angular/core";
 
 @Component({
-  selector: 'app-animation-scroll',
-  templateUrl: './animation-scroll.component.html',
-  styleUrls: ['./animation-scroll.component.scss']
+  selector: "app-animation-scroll",
+  templateUrl: "./animation-scroll.component.html",
+  styleUrls: ["./animation-scroll.component.scss"],
 })
 export class AnimationScrollComponent implements OnInit {
+  constructor() {}
 
-  constructor() { }
+  ngOnInit() {}
 
-  ngOnInit() {
-  }
 
 }

@@ -9,6 +9,7 @@ import { CardComponent } from './card/card.component';
 import { CursorComponent } from './cursor/cursor.component';
 import { AnimationScrollComponent } from './animation-scroll/animation-scroll.component';
 import { HomeComponent } from './home/home.component';
+import { ListAnimationComponent } from './list-animation/list-animation.component';
 
 @NgModule({
   declarations: [
@@ -16,7 +17,8 @@ import { HomeComponent } from './home/home.component';
     CardComponent,
     CursorComponent,
     AnimationScrollComponent,
-    HomeComponent
+    HomeComponent,
+    ListAnimationComponent
   ],
   imports: [
     BrowserModule,
