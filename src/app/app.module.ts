@@ -10,6 +10,7 @@ import { CursorComponent } from './cursor/cursor.component';
 import { AnimationScrollComponent } from './animation-scroll/animation-scroll.component';
 import { HomeComponent } from './home/home.component';
 import { ListAnimationComponent } from './list-animation/list-animation.component';
+import { ReactiveFormsModule, FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -24,7 +25,9 @@ import { ListAnimationComponent } from './list-animation/list-animation.componen
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
-    MaterialModule
+    MaterialModule,
+    ReactiveFormsModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
