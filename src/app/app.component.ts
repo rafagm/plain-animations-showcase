@@ -9,6 +9,7 @@ import {
 } from "@angular/router";
 import { filter } from "rxjs/operators";
 import { slideInAnimation } from "./route-animation";
+import { fadeInAnimation } from "./animation";
 
 gsap.registerPlugin(TextPlugin);
 
@@ -16,7 +17,7 @@ gsap.registerPlugin(TextPlugin);
   selector: "app-root",
   templateUrl: "./app.component.html",
   styleUrls: ["./app.component.scss"],
-  animations: [slideInAnimation],
+  animations: [slideInAnimation, fadeInAnimation],
 })
 export class AppComponent {
   title = "Animation Showcase";
