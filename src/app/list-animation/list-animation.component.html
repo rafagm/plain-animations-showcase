@@ -4,17 +4,17 @@
       <form class="form">
         <div class="input-group mb-3">
           <input
-            [formControl]="criterion"
+            [formControl]="criteria "
             type="text"
             class="form-control"
-            placeholder="Filtering criterion"
-            aria-label="Filtering criterion"
-            (keydown.enter)="applyCriterion()">
+            placeholder="Filtering criteria "
+            aria-label="Filtering criteria "
+            (keydown.enter)="applyCriteria()">
           <div class="input-group-append">
             <button
               class="btn btn-primary"
               type="button"
-              (click)="applyCriterion()">
+              (click)="applyCriteria()">
               Button
             </button>
           </div>

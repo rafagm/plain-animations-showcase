@@ -7,15 +7,15 @@ import { FormControl } from '@angular/forms';
   styleUrls: ['./list-animation.component.scss']
 })
 export class ListAnimationComponent implements OnInit {
-  criterion = new FormControl('');
+  criteria  = new FormControl('');
 
   constructor() { }
 
   ngOnInit() {
   }
 
-  applyCriterion() {
-    console.log(this.criterion.value.trim());
+  applyCriteria () {
+    console.log(this.criteria .value.trim());
 
   }
 
