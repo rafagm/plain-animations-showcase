@@ -9,7 +9,7 @@
             class="form-control"
             placeholder="Filtering criteria"
             aria-label="Filtering criteria"
-            (keydown.enter)="applyCriteria()">
+            (input)="applyCriteria()">
           <div class="input-group-append">
             <button
               class="btn btn-primary"
@@ -22,26 +22,19 @@
 
       </form>
 
-      <ul class="list-group mt-5">
-        <!-- <li class="list-group-item">
-          <div class="inner">
-            <span class="inner--badge">
-            13
-            </span>
-            <span class="inner--text">
-              Test
+      <ul
+        class="list-group mt-5"
+        [@filterAnimation]="totalItems">
+        <li
+          class="list-group-item"
+          *ngFor="let item of visibleItems, let i = index">
+          <div class="inner"><span class="inner--badge">
+              {{ i + 1}}
+            </span><span class="inner--text">
+              {{ item }}
             </span>
           </div>
         </li>
-        <li class="list-group-item">
-          <div class="inner">
-            <span class="inner--badge">
-            14
-            </span>
-            <span class="inner--text">
-              Test 2
-            </span>
-          </div> -->
       </ul>
     </div>
   </div>
