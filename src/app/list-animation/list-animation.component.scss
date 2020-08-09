@@ -11,9 +11,42 @@
   box-shadow: 7px 9px 18px 1px rgba(0, 0, 0, 0.24);
 }
 
-
 .btn {
   &-primary {
-    background-color: #0A62BF;
+    background-color: #0a62bf;
+  }
+}
+
+.list-group {
+  border: none;
+  &-item {
+    border: none;
+    padding: 0;
+    overflow: hidden;
+
+    &:not(:last-child) {
+      margin-bottom: .5em;
+    }
+
+    .inner {
+      display: flex;
+      align-items: stretch;
+
+      &--badge {
+        padding: 0.2em 0.35em;
+        display: flex;
+        align-items: center;
+        background-color: #edcf0c;
+        height: 2em;
+      }
+
+      &--text {
+        padding: 0.2em 0.5em;
+        display: flex;
+        align-items: center;
+        height: 2em;
+        min-width: 10em;
+      }
+    }
   }
 }

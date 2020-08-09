@@ -1,14 +1,14 @@
 <div class="container">
   <div class="row justify-content-center align-items-center">
-    <div class="col d-flex justify-content-center mt-5">
+    <div class="col d-flex flex-column justify-content-center align-items-center mt-5">
       <form class="form">
         <div class="input-group mb-3">
           <input
-            [formControl]="criteria "
+            [formControl]="criteria"
             type="text"
             class="form-control"
-            placeholder="Filtering criteria "
-            aria-label="Filtering criteria "
+            placeholder="Filtering criteria"
+            aria-label="Filtering criteria"
             (keydown.enter)="applyCriteria()">
           <div class="input-group-append">
             <button
@@ -21,6 +21,28 @@
         </div>
 
       </form>
+
+      <ul class="list-group mt-5">
+        <!-- <li class="list-group-item">
+          <div class="inner">
+            <span class="inner--badge">
+            13
+            </span>
+            <span class="inner--text">
+              Test
+            </span>
+          </div>
+        </li>
+        <li class="list-group-item">
+          <div class="inner">
+            <span class="inner--badge">
+            14
+            </span>
+            <span class="inner--text">
+              Test 2
+            </span>
+          </div> -->
+      </ul>
     </div>
   </div>
 </div>
