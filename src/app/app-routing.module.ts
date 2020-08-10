@@ -1,35 +1,40 @@
-import { NgModule } from '@angular/core';
-import { Routes, RouterModule } from '@angular/router';
-import { AnimationScrollComponent } from './animation-scroll/animation-scroll.component';
-import { HomeComponent } from './home/home.component';
-import { ListAnimationComponent } from './list-animation/list-animation.component';
-
+import { NgModule } from "@angular/core";
+import { Routes, RouterModule } from "@angular/router";
+import { AnimationScrollComponent } from "./animation-scroll/animation-scroll.component";
+import { HomeComponent } from "./home/home.component";
+import { ListAnimationComponent } from "./list-animation/list-animation.component";
+import { ButtonAnimationComponent } from './button-animation/button-animation.component';
 
 const routes: Routes = [
   {
-    path: '',
+    path: "",
     component: HomeComponent,
-    data: {animation: 'HomePage'}
+    data: { animation: "HomePage" },
   },
   {
-    path: 'scroll-animation',
+    path: "scroll-animation",
     component: AnimationScrollComponent,
-    data: {animation: 'CasePage'}
+    data: { animation: "CasePage" },
   },
   {
-    path: 'list-animation',
+    path: "list-animation",
     component: ListAnimationComponent,
-    data: {animation: 'CasePage'}
+    data: { animation: "CasePage" },
+  },
+  {
+    path: "button-animation",
+    component: ButtonAnimationComponent,
+    data: { animation: "CasePage" },
   },
   {
     path: "**",
-    redirectTo: '',
-    data: {animation: 'HomePage'}
-  }
+    redirectTo: "",
+    data: { animation: "HomePage" },
+  },
 ];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
-  exports: [RouterModule]
+  exports: [RouterModule],
 })
-export class AppRoutingModule { }
+export class AppRoutingModule {}

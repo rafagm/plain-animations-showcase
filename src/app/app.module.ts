@@ -11,6 +11,7 @@ import { AnimationScrollComponent } from './animation-scroll/animation-scroll.co
 import { HomeComponent } from './home/home.component';
 import { ListAnimationComponent } from './list-animation/list-animation.component';
 import { ReactiveFormsModule, FormsModule } from '@angular/forms';
+import { ButtonAnimationComponent } from './button-animation/button-animation.component';
 
 @NgModule({
   declarations: [
@@ -19,7 +20,8 @@ import { ReactiveFormsModule, FormsModule } from '@angular/forms';
     CursorComponent,
     AnimationScrollComponent,
     HomeComponent,
-    ListAnimationComponent
+    ListAnimationComponent,
+    ButtonAnimationComponent
   ],
   imports: [
     BrowserModule,
