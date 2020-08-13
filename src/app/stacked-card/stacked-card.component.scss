@@ -1,0 +1,34 @@
+body {
+  background: linear-gradient(#e8e8e8, #e0e0e0);
+}
+
+.wrapper {
+  margin: 20px auto;
+  max-width: 700px;
+  min-height: 2400px;
+}
+
+.card {
+  position: sticky;
+  top: 10px;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.1);
+  color: #333;
+  padding: 40px;
+
+  &:not(:last-child) {
+    margin-bottom: 20px;
+  }
+
+  h5 {
+    color: #0A62BF;
+  }
+}
+
+@for $i from 1 through 9 {
+  .card:nth-child(#{$i}n) {
+    top: $i * 20px;
+  }
+}

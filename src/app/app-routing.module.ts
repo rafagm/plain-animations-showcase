@@ -4,6 +4,7 @@ import { AnimationScrollComponent } from "./animation-scroll/animation-scroll.co
 import { HomeComponent } from "./home/home.component";
 import { ListAnimationComponent } from "./list-animation/list-animation.component";
 import { ButtonAnimationComponent } from './button-animation/button-animation.component';
+import { StackedCardComponent } from './stacked-card/stacked-card.component';
 
 const routes: Routes = [
   {
@@ -24,6 +25,11 @@ const routes: Routes = [
   {
     path: "button-animation",
     component: ButtonAnimationComponent,
+    data: { animation: "CasePage" },
+  },
+  {
+    path: "stacked-cards",
+    component: StackedCardComponent,
     data: { animation: "CasePage" },
   },
   {

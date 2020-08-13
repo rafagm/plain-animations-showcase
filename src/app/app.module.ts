@@ -12,6 +12,7 @@ import { HomeComponent } from './home/home.component';
 import { ListAnimationComponent } from './list-animation/list-animation.component';
 import { ReactiveFormsModule, FormsModule } from '@angular/forms';
 import { ButtonAnimationComponent } from './button-animation/button-animation.component';
+import { StackedCardComponent } from './stacked-card/stacked-card.component';
 
 @NgModule({
   declarations: [
@@ -21,7 +22,8 @@ import { ButtonAnimationComponent } from './button-animation/button-animation.co
     AnimationScrollComponent,
     HomeComponent,
     ListAnimationComponent,
-    ButtonAnimationComponent
+    ButtonAnimationComponent,
+    StackedCardComponent
   ],
   imports: [
     BrowserModule,
