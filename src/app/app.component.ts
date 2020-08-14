@@ -1,4 +1,4 @@
-import { Component, HostListener } from "@angular/core";
+import { Component, HostListener, ViewChild } from '@angular/core';
 import { gsap, TimelineMax } from "gsap";
 import { TextPlugin } from "gsap/TextPlugin";
 import {
@@ -28,6 +28,8 @@ export class AppComponent {
   private scrolling = false;
 
   public showBackHomeButton = false;
+
+  @ViewChild('topLineBreak', {static: true}) topLineBreak;
 
   constructor(private router: Router) {
     this.initRouterEvents();
@@ -119,8 +121,8 @@ export class AppComponent {
       });
   }
 
-  onClickArrow(element) {
-    element.scrollIntoView({
+  onClickArrow() {
+    this.topLineBreak.nativeElement.scrollIntoView({
       behavior: "smooth",
       block: "start",
       inline: "nearest",
@@ -135,5 +137,9 @@ export class AppComponent {
     return (
       outlet && outlet.activatedRouteData && outlet.activatedRouteData.animation
     );
+  }
+
+  onOutletLoaded(event) {
+    this.onClickArrow();
   }
 }

@@ -8,7 +8,7 @@
   #topLineBreak
   id="top-linebreak"
   class="line-break"></div>
-<a (click)="onClickArrow(topLineBreak)">
+<a (click)="onClickArrow()">
   <svg viewBox="0 0 10 9" class="arrow">
     <title>
       Scroll down
@@ -17,8 +17,12 @@
   </svg>
 </a>
 
-<div class="router-animations" [@routeAnimations]="prepareRoute(outlet)">
-  <router-outlet #outlet="outlet"></router-outlet>
+<div
+  class="router-animations"
+  [@routeAnimations]="prepareRoute(outlet)">
+  <router-outlet
+    #outlet="outlet"
+    (activate)="onOutletLoaded($event)"></router-outlet>
 </div>
 
 <div
