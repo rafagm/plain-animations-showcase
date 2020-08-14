@@ -33,20 +33,27 @@ export class ButtonAnimationComponent implements OnInit {
 
     /** do your animations here **/
 
-    console.log(direction);
+    JQuery(element).removeClass("button__animation--2 button__animation--1 button__animation--3 button__animation--4");
+
+
 
     switch (direction) {
       case 0:
         /** animations from the TOP **/
+        JQuery(element).addClass("button__animation--2");
+
         break;
       case 1:
+        JQuery(element).addClass("button__animation--3");
         /** animations from the RIGHT **/
         break;
       case 2:
         /** animations from the BOTTOM **/
+        JQuery(element).addClass("button__animation--4");
         break;
       case 3:
         /** animations from the LEFT **/
+        JQuery(element).addClass("button__animation--1");
         break;
     }
   }

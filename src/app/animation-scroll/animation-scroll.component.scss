@@ -1,0 +1,27 @@
+h2 {
+  color: #edcf0c;
+  letter-spacing: 1.1px;
+}
+
+.progress {
+  position: sticky;
+  top: 20px;
+  margin: 0 auto;
+  background-color: #edcf0c94;
+  width: 90%;
+  height: 17px;
+  border-radius: 20px;
+
+  &__bar {
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: #edcf0c;
+    width: 0;
+  }
+}
+
+.container {
+  min-height: 1500px;
+  height: 3000px;
+}
