@@ -22,6 +22,9 @@
     left: 50%;
     transform: translate(-50%, -80%);
     font: 900 5em Source Sans Pro, Arial, sans-serif !important;
+    @media only screen and (max-width: 600px) {
+      font-size: 4em !important;
+    }
     margin-bottom: 0.6em;
     color: #d8e0e4;
     text-transform: uppercase;
