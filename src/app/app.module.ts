@@ -13,6 +13,7 @@ import { ListAnimationComponent } from './list-animation/list-animation.componen
 import { ReactiveFormsModule, FormsModule } from '@angular/forms';
 import { ButtonAnimationComponent } from './button-animation/button-animation.component';
 import { StackedCardComponent } from './stacked-card/stacked-card.component';
+import { NgwWowModule } from 'ngx-wow';
 
 @NgModule({
   declarations: [
@@ -31,7 +32,8 @@ import { StackedCardComponent } from './stacked-card/stacked-card.component';
     BrowserAnimationsModule,
     MaterialModule,
     ReactiveFormsModule,
-    FormsModule
+    FormsModule,
+    NgwWowModule
   ],
   providers: [],
   bootstrap: [AppComponent]

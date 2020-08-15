@@ -18,10 +18,15 @@ export class AnimationScrollComponent implements OnInit {
 
   ngOnInit() {}
 
+  ngAfterViewInit(): void {
+  }
+
   @HostListener("window:scroll", ["$event"])
   onScroll(event) {
-    console.log(this.container);
+    this.fillProgressBar();
+  }
 
+  fillProgressBar() {
     const containerOffsetTop = this.container.nativeElement.offsetTop;
 
     const winScroll =
@@ -35,10 +40,10 @@ export class AnimationScrollComponent implements OnInit {
 
     const scrolled = (winScroll / height) * 100;
 
-    console.log("scrolled: ", scrolled);
-
     (<HTMLCollectionOf<HTMLElement>>(
       document.getElementsByClassName("progress__bar")
     ))[0].style.width = (scrolled > 0 ? scrolled : 0) + "%";
   }
+
+
 }
