@@ -4,7 +4,6 @@ mat-card {
 
   mat-card-header {
     mat-card-title {
-
       font-size: 1.2em;
       color: #184fa1;
       font-weight: 700;
@@ -33,6 +32,18 @@ button {
   background-color: #184fa1;
   font-size: 16px;
   color: whitesmoke;
+  transition: all 0.15s ease-in;
+
+  &:hover, &:focus {
+    transform: translateY(-2px);
+    filter: brightness(150%);
+    transition: all 0.15s ease-in;
+    color: #edcf0c;
+  }
+
+  &:active {
+    transform: none;
+  }
 }
 
 @keyframes cardAnimation {
