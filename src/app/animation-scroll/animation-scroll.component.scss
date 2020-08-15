@@ -11,6 +11,7 @@ h2 {
   width: 90%;
   height: 17px;
   border-radius: 20px;
+  z-index: 999;
 
   &__bar {
     position: absolute;
@@ -24,4 +25,32 @@ h2 {
 .container {
   min-height: 1500px;
   height: 3000px;
+}
+
+.card {
+  background-color: whitesmoke;
+  width: 30em;
+  height: 10em;
+  border: 0;
+  margin-bottom: 2em;
+
+  h5 {
+    color: #0A62BF;
+    padding: .4em 1em;
+
+  }
+
+  p {
+    text-align: center;
+    color: rgba(0, 0, 0, 0.767);
+  }
+
+  .footer {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 1em;
+    width: 100%;
+    background-color: #edcf0c;
+  }
 }
