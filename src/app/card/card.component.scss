@@ -11,6 +11,11 @@ mat-card {
       backface-visibility: hidden;
     }
   }
+
+  img {
+    background-position: cover;
+    height: 9em;
+  }
 }
 
 .card {
