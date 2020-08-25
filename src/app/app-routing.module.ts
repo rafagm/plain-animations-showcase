@@ -5,6 +5,7 @@ import { HomeComponent } from "./home/home.component";
 import { ListAnimationComponent } from "./list-animation/list-animation.component";
 import { ButtonAnimationComponent } from './button-animation/button-animation.component';
 import { StackedCardComponent } from './stacked-card/stacked-card.component';
+import { SpinnerComponent } from './spinner/spinner.component';
 
 const routes: Routes = [
   {
@@ -31,6 +32,11 @@ const routes: Routes = [
     path: "stacked-cards",
     component: StackedCardComponent,
     data: { animation: "CasePage" },
+  },
+  {
+    path: "spinner",
+    component: SpinnerComponent,
+    data: { animation: "CasePage"}
   },
   {
     path: "**",

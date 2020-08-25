@@ -14,6 +14,7 @@ import { ReactiveFormsModule, FormsModule } from '@angular/forms';
 import { ButtonAnimationComponent } from './button-animation/button-animation.component';
 import { StackedCardComponent } from './stacked-card/stacked-card.component';
 import { NgwWowModule } from 'ngx-wow';
+import { SpinnerComponent } from './spinner/spinner.component';
 
 @NgModule({
   declarations: [
@@ -24,7 +25,8 @@ import { NgwWowModule } from 'ngx-wow';
     HomeComponent,
     ListAnimationComponent,
     ButtonAnimationComponent,
-    StackedCardComponent
+    StackedCardComponent,
+    SpinnerComponent
   ],
   imports: [
     BrowserModule,
