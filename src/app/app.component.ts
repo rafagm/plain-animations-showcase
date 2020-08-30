@@ -12,6 +12,7 @@ import { slideInAnimation } from "./route-animation";
 import { fadeInAnimation } from "./animation";
 import { NgwWowService } from 'ngx-wow';
 import { Subscription } from 'rxjs';
+import { HomeComponent } from './home/home.component';
 
 gsap.registerPlugin(TextPlugin);
 
@@ -158,8 +159,8 @@ export class AppComponent {
     );
   }
 
-  onOutletLoaded(event) {
-    this.onClickArrow();
+  onOutletLoaded(event: any) {
+    if (! (event instanceof HomeComponent)) this.onClickArrow();
   }
 
   ngOnDestroy() {
